@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>To-Do List with Notifications</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Add the Font Awesome CDN link to include icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1><i class="fas fa-tasks"></i> To-Do List</h1>
+    </div>
+
+    <div id="calendar-picker-container" class="d-none">
+        <input type="date" id="calendar-picker">
+        <button id="calendar-save-btn" class="small-btn">Save Date</button> <!-- Add the class "small-btn" to the button -->
+      </div>
+
+    <div id="time-picker-container" class="d-none">
+      <input type="time" id="time-picker">
+      <button id="save-btn">Save Time</button>
+    </div>
+
+    <form id="taskForm">
+      <label for="task-input">Task Title:</label>
+      <input type="text" id="task-input" placeholder="Enter task title..." required>
+
+      <label for="task-description">Task Description:</label>
+      <input type="text" id="task-description" placeholder="Enter task description..." required>
+
+      <label for="due-date">Due Date:</label>
+      <input type="date" id="due-date" required>
+
+      <button id="add-btn">Add Task</button>
+      <button id="calendar-btn">Select Date</button>
+      <button id="notification-btn">Set Reminder</button>
+    </form>
+
+    <div id="card-container"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
